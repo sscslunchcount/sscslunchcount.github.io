@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSCS Lunch Count</title>
 
@@ -18,974 +17,598 @@
 
 body {
     margin: 0;
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f4f7fb 0%,
-            #eef2f7 100%
-        );
-
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fb;
     color: #172033;
-    min-height: 100vh;
 }
 
-
-/* =========================================
+/* =========================
    HEADER
-========================================= */
+========================= */
 
 .header {
-
-    background:
-        linear-gradient(
-            135deg,
-            #101936,
-            #173d70
-        );
-
-    color: white;
-
-    padding:
-        22px 45px;
-
-    box-shadow:
-        0 4px 20px
-        rgba(0,0,0,.15);
-
+    background: #ffffff;
+    border-bottom: 1px solid #e4e8ef;
+    padding: 20px 40px;
 }
-
 
 .header-inner {
-
-    max-width: 1250px;
-
+    max-width: 1200px;
     margin: auto;
-
     display: flex;
-
     align-items: center;
-
-    gap: 20px;
-
+    justify-content: space-between;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
 
 .logo {
-
     width: 78px;
     height: 78px;
-
     object-fit: contain;
-
 }
 
-
-.header-title h1 {
-
-    margin: 0;
-
-    font-size: 30px;
-
-    font-weight: 700;
-
+.school-name {
+    font-size: 27px;
+    font-weight: 750;
+    color: #18243b;
 }
 
-
-.header-title p {
-
-    margin:
-        5px 0 0;
-
+.school-subtitle {
+    margin-top: 5px;
+    color: #667085;
     font-size: 15px;
-
-    opacity: .85;
-
 }
 
+.menu-link {
+    text-decoration: none;
+    color: #ffffff;
+    background: #173f73;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .2s;
+}
 
-/* =========================================
+.menu-link:hover {
+    background: #102f57;
+}
+
+/* =========================
    MAIN
-========================================= */
+========================= */
 
 .container {
-
     max-width: 1200px;
-
-    margin:
-        0 auto;
-
-    padding:
-        50px 25px 70px;
-
+    margin: auto;
+    padding: 45px 25px 60px;
 }
 
-
-/* =========================================
-   HOME HERO
-========================================= */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-
     text-align: center;
-
-    margin-bottom: 45px;
-
+    margin-bottom: 35px;
 }
 
-
-.hero h2 {
-
-    font-size: 38px;
-
-    margin:
-        0 0 10px;
-
-    color: #111b35;
-
+.hero h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #17243d;
 }
-
 
 .hero p {
-
-    margin: 0;
-
+    margin: 10px 0 20px;
     color: #667085;
-
     font-size: 17px;
-
 }
 
-
-.date {
-
-    display: inline-block;
-
-    margin-top: 18px;
-
-    padding:
-        9px 17px;
-
+.date-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #e4e8ef;
     border-radius: 30px;
-
-    background: white;
-
-    box-shadow:
-        0 3px 12px
-        rgba(0,0,0,.07);
-
-    font-size: 14px;
-
-    color: #475467;
-
+    padding: 11px 20px;
+    color: #344054;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
 }
 
+/* =========================
+   WARNING
+========================= */
 
-/* =========================================
-   BUILDING CARDS
-========================================= */
+.deadline {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    background: #fff8e7;
+    border: 1px solid #f2d58a;
+    border-radius: 14px;
+    padding: 16px 20px;
+    text-align: center;
+    color: #795600;
+}
+
+.deadline strong {
+    font-size: 16px;
+}
+
+.deadline span {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+/* =========================
+   BUILDINGS
+========================= */
 
 .buildings {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 30px;
-
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
 }
-
 
 .building-card {
-
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 20px;
+    padding: 35px;
+    min-height: 280px;
     position: relative;
-
-    background: white;
-
-    border-radius: 22px;
-
-    padding:
-        42px 38px;
-
-    min-height: 300px;
-
     overflow: hidden;
-
-    box-shadow:
-        0 10px 35px
-        rgba(16,24,40,.09);
-
-    transition:
-        transform .2s,
-        box-shadow .2s;
-
+    box-shadow: 0 8px 28px rgba(16,24,40,.07);
+    transition: .2s;
 }
-
 
 .building-card:hover {
-
-    transform:
-        translateY(-5px);
-
-    box-shadow:
-        0 18px 45px
-        rgba(16,24,40,.15);
-
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(16,24,40,.11);
 }
 
-
-.building-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 7px;
-
-    background:
-        #173d70;
-
+.building-card.blue {
+    border-top: 6px solid #4a90e2;
 }
 
-
-.building-card.building2::before {
-
-    background:
-        #c1121f;
-
+.building-card.red {
+    border-top: 6px solid #d64545;
 }
 
-
-.building-number {
-
-    font-size: 14px;
-
-    font-weight: 700;
-
+.campus-label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #8a94a6;
     text-transform: uppercase;
-
-    letter-spacing: 1.5px;
-
-    color: #667085;
-
 }
 
-
-.building-card h3 {
-
+.building-card h2 {
+    margin: 9px 0 12px;
     font-size: 34px;
-
-    margin:
-        8px 0 10px;
-
-    color: #111b35;
-
+    color: #18243b;
 }
-
 
 .building-card p {
-
     color: #667085;
-
+    font-size: 16px;
     line-height: 1.6;
-
-    margin-bottom: 30px;
-
+    max-width: 470px;
 }
-
 
 .building-icon {
-
     position: absolute;
-
     right: 30px;
-    top: 35px;
-
+    top: 30px;
     width: 70px;
     height: 70px;
-
     border-radius: 18px;
-
-    background:
-        #edf3fb;
-
     display: flex;
-
-    align-items: center;
-
     justify-content: center;
-
+    align-items: center;
     font-size: 34px;
-
 }
 
-
-.building2 .building-icon {
-
-    background:
-        #fbeaec;
-
+.blue .building-icon {
+    background: #edf5ff;
 }
 
+.red .building-icon {
+    background: #fff0f0;
+}
 
 .open-button {
-
     border: none;
-
     border-radius: 10px;
-
-    padding:
-        14px 25px;
-
-    font-size: 16px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    background:
-        #173d70;
-
+    padding: 14px 24px;
     color: white;
-
-    transition:
-        background .2s;
-
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
-
-.open-button:hover {
-
-    background:
-        #102d53;
-
+.blue .open-button {
+    background: #4a90e2;
 }
 
-
-.building2 .open-button {
-
-    background:
-        #c1121f;
-
+.blue .open-button:hover {
+    background: #357abd;
 }
 
-
-.building2 .open-button:hover {
-
-    background:
-        #9d0e18;
-
+.red .open-button {
+    background: #d64545;
 }
 
+.red .open-button:hover {
+    background: #b93636;
+}
 
-/* =========================================
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    margin-top: 45px;
+    color: #98a2b3;
+    font-size: 13px;
+}
+
+/* =========================
    BUILDING PAGE
-========================================= */
+========================= */
 
 .page {
-
     display: none;
-
 }
-
 
 .back-button {
-
     border: none;
-
     background: none;
-
     padding: 0;
-
     margin-bottom: 25px;
-
-    color: #173d70;
-
+    color: #173f73;
     font-size: 16px;
-
-    font-weight: 600;
-
+    font-weight: 700;
     cursor: pointer;
-
 }
-
 
 .page-title {
-
     margin-bottom: 25px;
-
 }
-
 
 .page-title h2 {
-
     margin: 0;
-
     font-size: 32px;
-
-    color: #111b35;
-
 }
-
 
 .page-title p {
-
-    margin:
-        7px 0 0;
-
     color: #667085;
-
 }
 
-
-/* =========================================
+/* =========================
    LAYOUT
-========================================= */
+========================= */
 
 .layout {
-
     display: grid;
-
-    grid-template-columns:
-        380px 1fr;
-
+    grid-template-columns: 380px 1fr;
     gap: 30px;
-
     align-items: start;
-
 }
 
+/* =========================
+   FORM
+========================= */
 
-/* =========================================
-   FORM CARD
-========================================= */
-
-.form-card {
-
+.form-card,
+.results-card {
     background: white;
-
-    border-radius: 20px;
-
+    border: 1px solid #e5e9f0;
+    border-radius: 18px;
     padding: 30px;
-
-    box-shadow:
-        0 10px 35px
-        rgba(16,24,40,.09);
-
+    box-shadow: 0 8px 28px rgba(16,24,40,.07);
 }
 
-
-.form-card h3 {
-
-    margin: 0 0 25px;
-
-    font-size: 22px;
-
+.form-card h3,
+.results-card h3 {
+    margin-top: 0;
 }
-
 
 label {
-
     display: block;
-
+    margin: 20px 0 8px;
     font-weight: 700;
-
-    margin:
-        20px 0 8px;
-
     color: #344054;
-
 }
-
 
 select,
 input {
-
     width: 100%;
-
-    padding:
-        14px 15px;
-
-    border:
-        1px solid #d0d5dd;
-
+    padding: 14px;
+    border: 1px solid #d0d5dd;
     border-radius: 10px;
-
     background: white;
-
     font-size: 16px;
-
     outline: none;
-
-    transition:
-        border .2s,
-        box-shadow .2s;
-
 }
-
 
 select:focus,
 input:focus {
-
-    border-color:
-        #173d70;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(23,61,112,.12);
-
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74,144,226,.12);
 }
-
 
 .submit-button {
-
     width: 100%;
-
     margin-top: 25px;
-
-    padding:
-        15px;
-
+    padding: 15px;
     border: none;
-
     border-radius: 10px;
-
-    background:
-        #198754;
-
+    background: #198754;
     color: white;
-
-    font-size: 16px;
-
-    font-weight: 700;
-
+    font-size: 15px;
+    font-weight: 800;
     cursor: pointer;
-
 }
-
 
 .submit-button:hover {
-
-    background:
-        #157347;
-
+    background: #157347;
 }
-
 
 .submit-button:disabled {
-
     opacity: .6;
-
-    cursor:
-        not-allowed;
-
 }
 
-
-/* =========================================
-   MESSAGE
-========================================= */
-
-.message {
-
-    display: none;
-
-    margin-top: 15px;
-
-    padding: 12px 14px;
-
-    border-radius: 9px;
-
-    font-size: 14px;
-
-}
-
-
-.success {
-
-    display: block;
-
-    background:
-        #d1e7dd;
-
-    color:
-        #0f5132;
-
-}
-
-
-.error {
-
-    display: block;
-
-    background:
-        #f8d7da;
-
-    color:
-        #842029;
-
-}
-
-
-/* =========================================
+/* =========================
    RESULTS
-========================================= */
-
-.results-card {
-
-    background: white;
-
-    border-radius: 20px;
-
-    padding: 30px;
-
-    box-shadow:
-        0 10px 35px
-        rgba(16,24,40,.09);
-
-}
-
+========================= */
 
 .results-header {
-
     display: flex;
-
-    justify-content:
-        space-between;
-
+    justify-content: space-between;
     align-items: center;
-
     gap: 20px;
-
     margin-bottom: 20px;
-
 }
-
-
-.results-header h3 {
-
-    margin: 0;
-
-    font-size: 22px;
-
-}
-
 
 .total-box {
-
-    background:
-        #eef4fb;
-
-    border-radius: 14px;
-
-    padding:
-        15px 20px;
-
+    background: #eef5ff;
+    border-radius: 12px;
+    padding: 12px 20px;
     text-align: center;
-
-    min-width: 110px;
-
+    min-width: 105px;
 }
-
 
 .total-label {
-
-    font-size: 12px;
-
+    font-size: 11px;
     text-transform: uppercase;
-
-    letter-spacing: 1px;
-
     color: #667085;
-
 }
-
 
 .total-number {
-
-    font-size: 32px;
-
+    font-size: 30px;
     font-weight: 800;
-
-    color: #173d70;
-
-    line-height: 1.1;
-
-    margin-top: 3px;
-
+    color: #173f73;
 }
-
-
-/* =========================================
-   TABLE
-========================================= */
 
 .table-wrapper {
-
     overflow-x: auto;
-
 }
-
 
 table {
-
     width: 100%;
-
-    border-collapse:
-        collapse;
-
+    border-collapse: collapse;
 }
-
 
 th {
-
     text-align: left;
-
-    padding:
-        13px 12px;
-
-    background:
-        #f8fafc;
-
-    color:
-        #667085;
-
-    font-size: 13px;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing: .5px;
-
+    padding: 12px;
+    background: #f8fafc;
+    color: #667085;
+    font-size: 12px;
+    text-transform: uppercase;
 }
-
 
 td {
-
-    padding:
-        14px 12px;
-
-    border-bottom:
-        1px solid #eaecf0;
-
-    font-size: 15px;
-
+    padding: 14px 12px;
+    border-bottom: 1px solid #eaecf0;
 }
-
 
 td:last-child,
 th:last-child {
-
     text-align: right;
-
 }
-
 
 .lunch-number {
-
     font-weight: 800;
-
-    color: #173d70;
-
+    color: #173f73;
 }
-
-
-/* =========================================
-   EMPTY
-========================================= */
 
 .empty {
-
     text-align: center;
-
-    padding:
-        45px 20px;
-
+    padding: 45px 20px;
     color: #667085;
-
 }
-
 
 .empty-icon {
-
-    font-size: 40px;
-
+    font-size: 38px;
     margin-bottom: 10px;
-
 }
 
+/* =========================
+   MESSAGE
+========================= */
 
-/* =========================================
-   FOOTER
-========================================= */
-
-.footer {
-
-    text-align: center;
-
-    color: #98a2b3;
-
-    font-size: 13px;
-
-    margin-top: 45px;
-
+.message {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 14px;
 }
 
+.success {
+    display: block;
+    background: #d1e7dd;
+    color: #0f5132;
+}
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+.error {
+    display: block;
+    background: #f8d7da;
+    color: #842029;
+}
 
-@media (max-width: 800px) {
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 800px) {
 
     .header {
-
-        padding:
-            18px 20px;
-
+        padding: 18px 20px;
     }
 
     .header-inner {
-
-        gap: 13px;
-
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .logo {
-
-        width: 60px;
-        height: 60px;
-
+        width: 65px;
+        height: 65px;
     }
 
-    .header-title h1 {
-
-        font-size: 23px;
-
+    .school-name {
+        font-size: 22px;
     }
 
-    .container {
-
-        padding:
-            35px 18px;
-
+    .menu-link {
+        width: 100%;
+        text-align: center;
     }
 
-    .hero h2 {
-
-        font-size: 30px;
-
+    .hero h1 {
+        font-size: 31px;
     }
 
     .buildings {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
 
     .layout {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
 
     .results-header {
-
-        align-items:
-            flex-start;
-
-        flex-direction:
-            column;
-
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .total-box {
-
         width: 100%;
-
     }
-
 }
 
 </style>
 
 </head>
 
-
 <body>
 
 
-<!-- =========================================
+<!-- =========================
      HEADER
-========================================= -->
+========================= -->
 
 <header class="header">
 
 <div class="header-inner">
 
+<div class="brand">
+
 <img
-    class="logo"
-    src="https://seminolescience.org/images/media/sscs/Seminole_science.png"
-    alt="Seminole Science Charter School">
+class="logo"
+src="https://seminolescience.org/images/media/sscs/Seminole_science.png"
+alt="Seminole Science Charter School">
 
+<div>
 
-<div class="header-title">
-
-<h1>
+<div class="school-name">
 Seminole Science Charter School
-</h1>
+</div>
 
-<p>
+<div class="school-subtitle">
 Student Lunch Count
-</p>
+</div>
 
 </div>
+
+</div>
+
+<a
+class="menu-link"
+href="https://sla-oss.nutrislice.com/menus-eula"
+target="_blank">
+
+🍽️ Lunch Menu
+
+</a>
 
 </div>
 
 </header>
 
 
-
 <div class="container">
 
 
-<!-- =========================================
-     HOME PAGE
-========================================= -->
+<!-- =========================
+     HOME
+========================= -->
 
 <div id="homePage">
 
 
 <div class="hero">
 
-<h2>
+<h1>
 Daily Lunch Count
-</h2>
+</h1>
 
 <p>
 Please select your building to enter today's lunch count.
 </p>
 
-<div class="date"
-     id="todayDisplay">
-</div>
+<div
+class="date-time"
+id="dateTime">
 
 </div>
 
+</div>
+
+
+<div class="deadline">
+
+<strong>
+⏰ Please submit your lunch count by 8:30 AM.
+</strong>
+
+<span>
+This helps us prepare the correct number of lunches for our students.
+</span>
+
+</div>
 
 
 <div class="buildings">
@@ -993,27 +616,27 @@ Please select your building to enter today's lunch count.
 
 <!-- BUILDING 1 -->
 
-<div class="building-card">
+<div class="building-card blue">
 
-<div class="building-icon">
-🏫
-</div>
-
-<div class="building-number">
+<div class="campus-label">
 Campus
 </div>
 
-<h3>
+<h2>
 Building 1
-</h3>
+</h2>
 
 <p>
 Enter and view today's student lunch count for Building 1.
 </p>
 
+<div class="building-icon">
+🏫
+</div>
+
 <button
-    class="open-button"
-    onclick="openBuilding(1)">
+class="open-button"
+onclick="openBuilding(1)">
 
 Open Building 1
 
@@ -1022,30 +645,29 @@ Open Building 1
 </div>
 
 
-
 <!-- BUILDING 2 -->
 
-<div class="building-card building2">
+<div class="building-card red">
 
-<div class="building-icon">
-🏫
-</div>
-
-<div class="building-number">
+<div class="campus-label">
 Campus
 </div>
 
-<h3>
+<h2>
 Building 2
-</h3>
+</h2>
 
 <p>
 Enter and view today's student lunch count for Building 2.
 </p>
 
+<div class="building-icon">
+🏫
+</div>
+
 <button
-    class="open-button"
-    onclick="openBuilding(2)">
+class="open-button"
+onclick="openBuilding(2)">
 
 Open Building 2
 
@@ -1059,7 +681,7 @@ Open Building 2
 
 <div class="footer">
 
-Seminole Science Charter School • Lunch Count System
+Seminole Science Charter School • Student Lunch Count
 
 </div>
 
@@ -1067,18 +689,16 @@ Seminole Science Charter School • Lunch Count System
 </div>
 
 
-
-<!-- =========================================
+<!-- =========================
      BUILDING PAGE
-========================================= -->
+========================= -->
 
-<div id="buildingPage"
-     class="page">
+<div id="buildingPage" class="page">
 
 
 <button
-    class="back-button"
-    onclick="goHome()">
+class="back-button"
+onclick="goHome()">
 
 ← Back to Buildings
 
@@ -1098,13 +718,10 @@ Submit today's student lunch count.
 </div>
 
 
-
 <div class="layout">
 
 
-<!-- =========================================
-     FORM
-========================================= -->
+<!-- FORM -->
 
 <div class="form-card">
 
@@ -1127,25 +744,23 @@ Loading teachers...
 </select>
 
 
-
 <label for="lunchCount">
 How many students need lunch?
 </label>
 
 
 <input
-    type="number"
-    id="lunchCount"
-    min="0"
-    step="1"
-    placeholder="Example: 20"
->
+type="number"
+id="lunchCount"
+min="0"
+step="1"
+placeholder="Example: 20">
 
 
 <button
-    class="submit-button"
-    id="submitButton"
-    onclick="submitLunch()">
+class="submit-button"
+id="submitButton"
+onclick="submitLunch()">
 
 SUBMIT LUNCH COUNT
 
@@ -1153,21 +768,16 @@ SUBMIT LUNCH COUNT
 
 
 <div
-    id="message"
-    class="message">
+id="message"
+class="message">
+</div>
+
 </div>
 
 
-</div>
-
-
-
-<!-- =========================================
-     RESULTS
-========================================= -->
+<!-- RESULTS -->
 
 <div class="results-card">
-
 
 <div class="results-header">
 
@@ -1183,8 +793,8 @@ Total
 </div>
 
 <div
-    class="total-number"
-    id="totalCount">
+class="total-number"
+id="totalCount">
 
 0
 
@@ -1195,9 +805,7 @@ Total
 </div>
 
 
-
-<div
-    id="results">
+<div id="results">
 
 <div class="empty">
 
@@ -1210,7 +818,6 @@ No lunch counts submitted yet today.
 </div>
 
 </div>
-
 
 </div>
 
@@ -1231,23 +838,19 @@ Seminole Science Charter School • Daily Lunch Count
 </div>
 
 
-
-<!-- Hidden iframe -->
-
 <iframe
-    name="submitFrame"
-    id="submitFrame"
-    style="display:none;">
+name="submitFrame"
+id="submitFrame"
+style="display:none;">
 </iframe>
-
 
 
 <script>
 
 
-/* =========================================
-   GOOGLE APPS SCRIPT
-========================================= */
+/* =====================================
+   GOOGLE APPS SCRIPT URL
+===================================== */
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbzmpz1R24ANxHIv8DNFdsuYRIUoVAzY_87e-kHu2d1kCGH3KodoXpqnHjYE2yZUEUGK/exec";
@@ -1262,18 +865,16 @@ let allLunchData = [];
 let jsonpCounter = 0;
 
 
-/* =========================================
-   DATE DISPLAY
-========================================= */
+/* =====================================
+   DATE + TIME
+===================================== */
 
-function showToday() {
+function updateDateTime() {
 
-    const today =
-        new Date();
+    const now = new Date();
 
-
-    const formatted =
-        today.toLocaleDateString(
+    const date =
+        now.toLocaleDateString(
             "en-US",
             {
                 weekday: "long",
@@ -1283,45 +884,54 @@ function showToday() {
             }
         );
 
+    const time =
+        now.toLocaleTimeString(
+            "en-US",
+            {
+                hour: "numeric",
+                minute: "2-digit",
+                second: "2-digit"
+            }
+        );
 
     document.getElementById(
-        "todayDisplay"
+        "dateTime"
     ).innerText =
-        formatted;
+        "📅 " + date + "  •  🕐 " + time;
 
 }
 
+updateDateTime();
 
-showToday();
+setInterval(
+    updateDateTime,
+    1000
+);
 
 
-/* =========================================
+/* =====================================
    OPEN BUILDING
-========================================= */
+===================================== */
 
 function openBuilding(building) {
 
     currentBuilding =
         String(building);
 
-
     document.getElementById(
         "homePage"
     ).style.display =
         "none";
-
 
     document.getElementById(
         "buildingPage"
     ).style.display =
         "block";
 
-
     document.getElementById(
         "buildingTitle"
     ).innerText =
         "Building " + building;
-
 
     document.getElementById(
         "resultsTitle"
@@ -1330,7 +940,6 @@ function openBuilding(building) {
         building +
         " Lunch Count";
 
-
     loadTeachers();
 
     loadLunchData();
@@ -1338,9 +947,9 @@ function openBuilding(building) {
 }
 
 
-/* =========================================
+/* =====================================
    HOME
-========================================= */
+===================================== */
 
 function goHome() {
 
@@ -1349,27 +958,24 @@ function goHome() {
     ).style.display =
         "block";
 
-
     document.getElementById(
         "buildingPage"
     ).style.display =
         "none";
-
 
     currentBuilding = null;
 
 }
 
 
-/* =========================================
+/* =====================================
    JSONP
-========================================= */
+===================================== */
 
 function jsonp(action) {
 
     return new Promise(
         function(resolve, reject) {
-
 
             const callbackName =
                 "jsonpCallback_" +
@@ -1377,12 +983,10 @@ function jsonp(action) {
                 "_" +
                 (++jsonpCounter);
 
-
             const script =
                 document.createElement(
                     "script"
                 );
-
 
             window[callbackName] =
                 function(data) {
@@ -1397,7 +1001,6 @@ function jsonp(action) {
 
                 };
 
-
             script.src =
                 API_URL +
                 "?action=" +
@@ -1406,7 +1009,6 @@ function jsonp(action) {
                 ) +
                 "&callback=" +
                 callbackName;
-
 
             script.onerror =
                 function() {
@@ -1419,12 +1021,11 @@ function jsonp(action) {
 
                     reject(
                         new Error(
-                            "Unable to connect to Google Apps Script."
+                            "Unable to connect."
                         )
                     );
 
                 };
-
 
             document.body.appendChild(
                 script
@@ -1436,9 +1037,9 @@ function jsonp(action) {
 }
 
 
-/* =========================================
+/* =====================================
    LOAD TEACHERS
-========================================= */
+===================================== */
 
 async function loadTeachers() {
 
@@ -1447,10 +1048,8 @@ async function loadTeachers() {
             "teacherSelect"
         );
 
-
     select.innerHTML =
         "<option>Loading teachers...</option>";
-
 
     try {
 
@@ -1458,7 +1057,6 @@ async function loadTeachers() {
             await jsonp(
                 "teachers"
             );
-
 
         if (!result.success) {
 
@@ -1468,14 +1066,11 @@ async function loadTeachers() {
 
         }
 
-
         allTeachers =
             result.teachers || [];
 
-
         const buildingTeachers =
             allTeachers
-
             .filter(
                 function(teacher) {
 
@@ -1489,22 +1084,18 @@ async function loadTeachers() {
 
                 }
             )
-
             .sort(
-                function(a, b) {
+                function(a,b) {
 
-                    return a.name
-                        .localeCompare(
-                            b.name
-                        );
+                    return a.name.localeCompare(
+                        b.name
+                    );
 
                 }
             );
 
-
         select.innerHTML =
             '<option value="">Select your name</option>';
-
 
         buildingTeachers.forEach(
             function(teacher) {
@@ -1514,14 +1105,11 @@ async function loadTeachers() {
                         "option"
                     );
 
-
                 option.value =
                     teacher.name;
 
-
                 option.textContent =
                     teacher.name;
-
 
                 select.appendChild(
                     option
@@ -1529,7 +1117,6 @@ async function loadTeachers() {
 
             }
         );
-
 
         if (
             buildingTeachers.length === 0
@@ -1540,17 +1127,13 @@ async function loadTeachers() {
 
         }
 
-
     }
-
     catch(error) {
 
         console.error(error);
 
-
         select.innerHTML =
             '<option value="">Unable to load teachers</option>';
-
 
         showMessage(
             "Unable to load the teacher list.",
@@ -1562,21 +1145,19 @@ async function loadTeachers() {
 }
 
 
-/* =========================================
+/* =====================================
    LOAD LUNCH DATA
-========================================= */
+===================================== */
 
 async function loadLunchData() {
 
     document.getElementById(
         "results"
     ).innerHTML =
-
         '<div class="empty">' +
         '<div class="empty-icon">⏳</div>' +
         'Loading lunch data...' +
         '</div>';
-
 
     try {
 
@@ -1584,7 +1165,6 @@ async function loadLunchData() {
             await jsonp(
                 "lunch"
             );
-
 
         if (!result.success) {
 
@@ -1594,24 +1174,19 @@ async function loadLunchData() {
 
         }
 
-
         allLunchData =
             result.data || [];
-
 
         displayLunchData();
 
     }
-
     catch(error) {
 
         console.error(error);
 
-
         document.getElementById(
             "results"
         ).innerHTML =
-
             '<div class="empty">' +
             '<div class="empty-icon">⚠️</div>' +
             'Unable to load lunch data.' +
@@ -1622,34 +1197,29 @@ async function loadLunchData() {
 }
 
 
-/* =========================================
-   DISPLAY LUNCH
-========================================= */
+/* =====================================
+   DISPLAY DATA
+===================================== */
 
 function displayLunchData() {
 
     const today =
         getToday();
 
-
     const teacherData = {};
-
 
     allLunchData.forEach(
         function(item) {
-
 
             const building =
                 String(
                     item.building
                 ).trim();
 
-
             const date =
                 formatDate(
                     item.date
                 );
-
 
             if (
 
@@ -1676,9 +1246,7 @@ function displayLunchData() {
         }
     );
 
-
     let total = 0;
-
 
     Object.values(
         teacherData
@@ -1690,18 +1258,15 @@ function displayLunchData() {
         }
     );
 
-
     document.getElementById(
         "totalCount"
     ).innerText =
         total;
 
-
     const teachers =
         Object.keys(
             teacherData
         ).sort();
-
 
     if (
         teachers.length === 0
@@ -1710,76 +1275,50 @@ function displayLunchData() {
         document.getElementById(
             "results"
         ).innerHTML =
-
             '<div class="empty">' +
-
             '<div class="empty-icon">🍽️</div>' +
-
             'No lunch counts submitted yet today.' +
-
             '</div>';
 
         return;
 
     }
 
-
-    let html = `
-
-<div class="table-wrapper">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Teacher</th>
-
-<th>Lunch</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-`;
-
+    let html =
+        '<div class="table-wrapper">' +
+        '<table>' +
+        '<thead>' +
+        '<tr>' +
+        '<th>Teacher</th>' +
+        '<th>Lunch</th>' +
+        '</tr>' +
+        '</thead>' +
+        '<tbody>';
 
     teachers.forEach(
         function(teacher) {
 
-            html += `
-
-<tr>
-
-<td>
-${escapeHtml(teacher)}
-</td>
-
-<td class="lunch-number">
-${teacherData[teacher]}
-</td>
-
-</tr>
-
-`;
+            html +=
+                '<tr>' +
+                '<td>' +
+                escapeHtml(
+                    teacher
+                ) +
+                '</td>' +
+                '<td class="lunch-number">' +
+                teacherData[
+                    teacher
+                ] +
+                '</td>' +
+                '</tr>';
 
         }
     );
 
-
-    html += `
-
-</tbody>
-
-</table>
-
-</div>
-
-`;
-
+    html +=
+        '</tbody>' +
+        '</table>' +
+        '</div>';
 
     document.getElementById(
         "results"
@@ -1789,9 +1328,9 @@ ${teacherData[teacher]}
 }
 
 
-/* =========================================
+/* =====================================
    SUBMIT
-========================================= */
+===================================== */
 
 function submitLunch() {
 
@@ -1800,12 +1339,10 @@ function submitLunch() {
             "teacherSelect"
         ).value;
 
-
     const lunch =
         document.getElementById(
             "lunchCount"
         ).value;
-
 
     if (!teacher) {
 
@@ -1818,21 +1355,14 @@ function submitLunch() {
 
     }
 
-
     if (
-
         lunch === ""
-
         ||
-
         Number(lunch) < 0
-
         ||
-
         !Number.isInteger(
             Number(lunch)
         )
-
     ) {
 
         showMessage(
@@ -1844,42 +1374,31 @@ function submitLunch() {
 
     }
 
-
     const button =
         document.getElementById(
             "submitButton"
         );
 
-
-    button.disabled =
-        true;
-
+    button.disabled = true;
 
     button.innerText =
         "SUBMITTING...";
-
 
     const form =
         document.createElement(
             "form"
         );
 
-
-    form.method =
-        "POST";
-
+    form.method = "POST";
 
     form.action =
         API_URL;
 
-
     form.target =
         "submitFrame";
 
-
     form.style.display =
         "none";
-
 
     addFormField(
         form,
@@ -1887,13 +1406,11 @@ function submitLunch() {
         currentBuilding
     );
 
-
     addFormField(
         form,
         "teacher",
         teacher
     );
-
 
     addFormField(
         form,
@@ -1901,44 +1418,34 @@ function submitLunch() {
         lunch
     );
 
-
     document.body.appendChild(
         form
     );
 
-
     form.submit();
 
-
     form.remove();
-
 
     setTimeout(
         async function() {
 
-
             button.disabled =
                 false;
 
-
             button.innerText =
                 "SUBMIT LUNCH COUNT";
-
 
             document.getElementById(
                 "lunchCount"
             ).value =
                 "";
 
-
             showMessage(
                 "Lunch count submitted successfully!",
                 true
             );
 
-
             await loadLunchData();
-
 
         },
         1200
@@ -1947,9 +1454,9 @@ function submitLunch() {
 }
 
 
-/* =========================================
-   FORM FIELD
-========================================= */
+/* =====================================
+   ADD FORM FIELD
+===================================== */
 
 function addFormField(
     form,
@@ -1962,18 +1469,11 @@ function addFormField(
             "input"
         );
 
+    input.type = "hidden";
 
-    input.type =
-        "hidden";
+    input.name = name;
 
-
-    input.name =
-        name;
-
-
-    input.value =
-        value;
-
+    input.value = value;
 
     form.appendChild(
         input
@@ -1982,9 +1482,9 @@ function addFormField(
 }
 
 
-/* =========================================
+/* =====================================
    MESSAGE
-========================================= */
+===================================== */
 
 function showMessage(
     text,
@@ -1996,20 +1496,16 @@ function showMessage(
             "message"
         );
 
-
     message.innerText =
         text;
-
 
     message.className =
         success
         ? "message success"
         : "message error";
 
-
     message.style.display =
         "block";
-
 
     setTimeout(
         function() {
@@ -2024,44 +1520,37 @@ function showMessage(
 }
 
 
-/* =========================================
+/* =====================================
    TODAY
-========================================= */
+===================================== */
 
 function getToday() {
 
     const now =
         new Date();
 
-
     return (
-
         now.getFullYear()
-
         +
-
-        "-" +
-
+        "-"
+        +
         String(
             now.getMonth() + 1
-        ).padStart(2, "0")
-
+        ).padStart(2,"0")
         +
-
-        "-" +
-
+        "-"
+        +
         String(
             now.getDate()
-        ).padStart(2, "0")
-
+        ).padStart(2,"0")
     );
 
 }
 
 
-/* =========================================
+/* =====================================
    FORMAT DATE
-========================================= */
+===================================== */
 
 function formatDate(value) {
 
@@ -2069,10 +1558,8 @@ function formatDate(value) {
         return "";
     }
 
-
     const date =
         new Date(value);
-
 
     if (
         isNaN(
@@ -2084,35 +1571,28 @@ function formatDate(value) {
 
     }
 
-
     return (
-
         date.getFullYear()
-
         +
-
-        "-" +
-
+        "-"
+        +
         String(
             date.getMonth() + 1
-        ).padStart(2, "0")
-
+        ).padStart(2,"0")
         +
-
-        "-" +
-
+        "-"
+        +
         String(
             date.getDate()
-        ).padStart(2, "0")
-
+        ).padStart(2,"0")
     );
 
 }
 
 
-/* =========================================
+/* =====================================
    ESCAPE HTML
-========================================= */
+===================================== */
 
 function escapeHtml(text) {
 
@@ -2121,17 +1601,14 @@ function escapeHtml(text) {
             "div"
         );
 
-
     div.textContent =
         text;
-
 
     return div.innerHTML;
 
 }
 
 </script>
-
 
 </body>
 
