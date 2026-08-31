@@ -4,11 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SSCS Lunch Count</title>
 
 <style>
+
+/* =========================================
+   GENERAL
+========================================= */
 
 * {
     box-sizing: border-box;
@@ -23,7 +28,7 @@ body {
 
 
 /* =========================================
-   MAIN HEADER
+   HEADER
 ========================================= */
 
 .header {
@@ -48,8 +53,8 @@ body {
 }
 
 .logo {
-    width: 88px;
-    height: 88px;
+    width: 82px;
+    height: 82px;
     object-fit: contain;
 }
 
@@ -67,34 +72,33 @@ body {
 
 
 /* =========================================
-   LUNCH MENU BUTTON
+   LUNCH MENU
 ========================================= */
 
 .menu-button {
     text-decoration: none;
-    background: #173f73;
+    background: #245a96;
     color: white;
-    padding: 13px 22px;
-    border-radius: 10px;
+    padding: 14px 23px;
+    border-radius: 11px;
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 800;
     transition: .2s;
 }
 
 .menu-button:hover {
-    background: #102f57;
-    transform: translateY(-1px);
+    background: #194879;
 }
 
 
 /* =========================================
-   CONTAINER
+   MAIN
 ========================================= */
 
 .container {
     max-width: 1250px;
     margin: auto;
-    padding: 50px 25px 70px;
+    padding: 48px 25px 70px;
 }
 
 
@@ -104,7 +108,7 @@ body {
 
 .hero {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 .hero h1 {
@@ -115,7 +119,7 @@ body {
 }
 
 .hero p {
-    margin: 12px 0 22px;
+    margin: 12px 0 20px;
     font-size: 17px;
     color: #667085;
 }
@@ -145,7 +149,7 @@ body {
 
 .deadline {
     max-width: 900px;
-    margin: 0 auto 42px;
+    margin: 0 auto 40px;
     background: #fff8e7;
     border: 1px solid #f0d58b;
     border-radius: 15px;
@@ -155,19 +159,19 @@ body {
 
 .deadline-title {
     color: #725200;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 800;
 }
 
 .deadline-text {
     color: #856404;
-    margin-top: 5px;
+    margin-top: 6px;
     font-size: 14px;
 }
 
 
 /* =========================================
-   BUILDING CARDS
+   BUILDINGS
 ========================================= */
 
 .buildings {
@@ -193,20 +197,13 @@ body {
     box-shadow: 0 18px 42px rgba(16,24,40,.13);
 }
 
-
-/* Building 1 */
-
 .building1 {
     border-top: 6px solid #245a96;
 }
 
-
-/* Building 2 */
-
 .building2 {
     border-top: 6px solid #c92532;
 }
-
 
 .building-number {
     font-size: 13px;
@@ -236,11 +233,6 @@ body {
     margin-bottom: 28px;
 }
 
-
-/* =========================================
-   BUILDING ICON
-========================================= */
-
 .building-symbol {
     position: absolute;
     right: 35px;
@@ -264,7 +256,7 @@ body {
 
 
 /* =========================================
-   OPEN BUTTON
+   BUTTONS
 ========================================= */
 
 .open-button {
@@ -275,7 +267,6 @@ body {
     font-size: 15px;
     font-weight: 800;
     cursor: pointer;
-    transition: .2s;
 }
 
 .building1 .open-button {
@@ -296,7 +287,7 @@ body {
 
 
 /* =========================================
-   BUILDING PAGE
+   PAGE
 ========================================= */
 
 .page {
@@ -305,64 +296,34 @@ body {
 
 
 /* =========================================
-   BUILDING HEADER
+   BUILDING DATE
+   NO SECOND LOGO
 ========================================= */
 
-.building-header {
-    background: #ffffff;
-    border: 1px solid #e4e8ef;
-    border-radius: 18px;
-    padding: 16px 24px;
-    margin-bottom: 25px;
-    box-shadow: 0 6px 22px rgba(16,24,40,.06);
-}
-
-.building-header-inner {
+.building-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    margin-bottom: 28px;
 }
 
-.building-brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.building-logo {
-    width: 68px;
-    height: 68px;
-    object-fit: contain;
-}
-
-.building-school-name {
-    font-size: 21px;
-    font-weight: 800;
-    color: #17243d;
-}
-
-.building-school-subtitle {
-    font-size: 13px;
-    color: #667085;
-    margin-top: 4px;
-}
-
-.building-datetime {
-    background: #f5f7fa;
-    border: 1px solid #e4e8ef;
-    border-radius: 10px;
-    padding: 11px 17px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #344054;
+.building-date {
+    margin-left: auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 13px 20px;
+    box-shadow: 0 5px 18px rgba(16,24,40,.06);
     text-align: right;
-    white-space: nowrap;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
 
 /* =========================================
-   BACK BUTTON
+   BACK
 ========================================= */
 
 .back-button {
@@ -383,17 +344,19 @@ body {
 
 .page-title h2 {
     margin: 0;
-    font-size: 34px;
+    font-size: 38px;
+    color: #17243d;
 }
 
 .page-title p {
     color: #667085;
     margin-top: 8px;
+    font-size: 16px;
 }
 
 
 /* =========================================
-   FORM / RESULTS
+   LAYOUT
 ========================================= */
 
 .layout {
@@ -553,6 +516,51 @@ td:last-child {
 
 
 /* =========================================
+   MISSING
+========================================= */
+
+.missing-box {
+    margin-top: 28px;
+    background: #fff8e7;
+    border: 1px solid #f0d58b;
+    border-radius: 16px;
+    padding: 22px 25px;
+}
+
+.missing-title {
+    color: #725200;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.missing-subtitle {
+    color: #856404;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.missing-teacher {
+    background: white;
+    border: 1px solid #eadfbf;
+    border-radius: 9px;
+    padding: 11px 14px;
+    margin-top: 8px;
+    color: #344054;
+    font-weight: 600;
+}
+
+.all-submitted {
+    background: #ecfdf3;
+    border: 1px solid #b7ebcc;
+    color: #0f5132;
+    padding: 12px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================================
    EMPTY
 ========================================= */
 
@@ -658,18 +666,18 @@ td:last-child {
         font-size: 17px;
     }
 
+    .building-top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .building-date {
+        margin-left: 0;
+        text-align: center;
+    }
+
     .layout {
         grid-template-columns: 1fr;
-    }
-
-    .building-header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .building-datetime {
-        width: 100%;
-        text-align: center;
     }
 
     .results-header {
@@ -691,23 +699,21 @@ td:last-child {
 <body>
 
 
-<!-- =================================================
-     MAIN HEADER
-================================================= -->
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="header">
 
 <div class="header-inner">
 
-
 <div class="brand">
 
-
 <img
-class="logo"
-src="https://seminolescience.org/images/media/sscs/Seminole_science.png"
-alt="Seminole Science Charter School">
-
+    class="logo"
+    src="https://seminolescience.org/images/media/sscs/Seminole_science.png"
+    alt="Seminole Science Charter School"
+>
 
 <div>
 
@@ -721,19 +727,16 @@ Student Lunch Count
 
 </div>
 
-
 </div>
 
 
 <a
-href="https://sla-oss.nutrislice.com/menus-eula"
-target="_blank"
-class="menu-button">
-
+    href="https://sla-oss.nutrislice.com/menus-eula"
+    target="_blank"
+    class="menu-button"
+>
 🍽️ Lunch Menu
-
 </a>
-
 
 </div>
 
@@ -744,174 +747,123 @@ class="menu-button">
 <div class="container">
 
 
-<!-- =================================================
-     HOME PAGE
-================================================= -->
+<!-- =========================================
+     HOME
+========================================= -->
 
 <div id="homePage">
 
-
 <div class="hero">
-
 
 <h1>
 Daily Lunch Count
 </h1>
 
-
 <p>
 Please select your building to enter today's lunch count.
 </p>
 
-
 <div
-class="datetime"
-id="dateTime">
-
+    class="datetime"
+    id="dateTime"
+>
 Loading...
-
 </div>
 
-
 </div>
-
 
 
 <!-- DEADLINE -->
 
 <div class="deadline">
 
-
 <div class="deadline-title">
-
 ⏰ Please submit your lunch count by 8:30 AM.
-
 </div>
-
 
 <div class="deadline-text">
-
 Your lunch count helps us prepare the correct number of meals for our students.
+</div>
 
 </div>
 
 
-</div>
-
-
-
-<!-- BUILDING CARDS -->
+<!-- BUILDINGS -->
 
 <div class="buildings">
 
 
-<!-- =============================================
-     BUILDING 1
-============================================= -->
+<!-- BUILDING 1 -->
 
 <div class="building-card building1">
 
-
 <div class="building-number">
 Campus
 </div>
 
-
 <h2>
-
 Building 1
-
 <span class="building-type">
 — Elementary
 </span>
-
 </h2>
 
-
 <p>
-
 Enter and view today's student lunch count for Building 1.
-
 </p>
 
-
 <div class="building-symbol">
-
 🏫
-
 </div>
-
 
 <button
-class="open-button"
-onclick="openBuilding(1)">
-
+    class="open-button"
+    onclick="openBuilding(1)"
+>
 Open Building 1
-
 </button>
-
 
 </div>
 
 
-
-<!-- =============================================
-     BUILDING 2
-============================================= -->
+<!-- BUILDING 2 -->
 
 <div class="building-card building2">
-
 
 <div class="building-number">
 Campus
 </div>
 
-
 <h2>
-
 Building 2
-
 <span class="building-type">
 — Middle-High
 </span>
-
 </h2>
 
-
 <p>
-
 Enter and view today's student lunch count for Building 2.
-
 </p>
 
-
 <div class="building-symbol">
-
 🏫
-
 </div>
-
 
 <button
-class="open-button"
-onclick="openBuilding(2)">
-
+    class="open-button"
+    onclick="openBuilding(2)"
+>
 Open Building 2
-
 </button>
 
-
 </div>
 
 
 </div>
-
 
 
 <div class="footer">
-
 Seminole Science Charter School • Daily Lunch Count
-
 </div>
 
 
@@ -919,230 +871,174 @@ Seminole Science Charter School • Daily Lunch Count
 
 
 
-<!-- =================================================
+<!-- =========================================
      BUILDING PAGE
-================================================= -->
+========================================= -->
 
 <div
-id="buildingPage"
-class="page">
+    id="buildingPage"
+    class="page"
+>
 
 
+<!-- DATE + TIME ONLY -->
 
-<!-- BUILDING HEADER -->
+<div class="building-top">
 
-<div class="building-header">
-
-
-<div class="building-header-inner">
-
-
-<div class="building-brand">
-
-
-<img
-class="building-logo"
-src="https://seminolescience.org/images/media/sscs/Seminole_science.png"
-alt="Seminole Science Charter School">
-
-
-<div>
-
-<div class="building-school-name">
-
-Seminole Science Charter School
-
-</div>
-
-
-<div class="building-school-subtitle">
-
-Student Lunch Count
-
-</div>
-
-</div>
-
-
-</div>
-
-
+<div></div>
 
 <div
-class="building-datetime"
-id="buildingDateTime">
-
+    class="building-date"
+    id="buildingDateTime"
+>
 Loading...
-
-</div>
-
-
 </div>
 
 </div>
 
-
-
-<!-- BACK -->
 
 <button
-class="back-button"
-onclick="goHome()">
-
+    class="back-button"
+    onclick="goHome()"
+>
 ← Back to Buildings
-
 </button>
 
 
-
-<!-- TITLE -->
-
 <div class="page-title">
 
-
 <h2 id="buildingTitle">
-
 Building 1 — Elementary
-
 </h2>
 
-
 <p>
-
 Submit today's student lunch count.
-
 </p>
-
 
 </div>
 
-
-
-<!-- CONTENT -->
 
 <div class="layout">
 
 
-
-<!-- FORM -->
+<!-- =====================================
+     FORM
+===================================== -->
 
 <div class="form-card">
 
-
 <h3>
-
 Enter Lunch Count
-
 </h3>
 
 
-
 <label for="teacherSelect">
-
 Teacher
-
 </label>
 
-
-<select
-id="teacherSelect">
+<select id="teacherSelect">
 
 <option value="">
-
 Loading teachers...
-
 </option>
 
 </select>
 
 
-
 <label for="lunchCount">
-
 How many students need lunch?
-
 </label>
 
-
 <input
-type="number"
-id="lunchCount"
-min="0"
-step="1"
-placeholder="Example: 20">
-
+    type="number"
+    id="lunchCount"
+    min="0"
+    step="1"
+    placeholder="Example: 20"
+>
 
 
 <button
-class="submit-button"
-id="submitButton"
-onclick="submitLunch()">
-
+    class="submit-button"
+    id="submitButton"
+    onclick="submitLunch()"
+>
 SUBMIT LUNCH COUNT
-
 </button>
 
 
-
 <div
-id="message"
-class="message">
+    id="message"
+    class="message"
+>
+</div>
 
 </div>
 
 
-</div>
 
+<!-- =====================================
+     RESULTS
+===================================== -->
 
-
-<!-- RESULTS -->
+<div>
 
 <div class="results-card">
 
-
 <div class="results-header">
 
-
 <h3 id="resultsTitle">
-
 Building 1 — Elementary Lunch Count
-
 </h3>
-
-
 
 <div class="total-box">
 
-
 <div class="total-label">
-
 Total
-
 </div>
-
 
 <div
-class="total-number"
-id="totalCount">
-
+    class="total-number"
+    id="totalCount"
+>
 0
+</div>
 
 </div>
 
-
 </div>
-
-
-</div>
-
 
 
 <div id="results">
 
 <div class="empty">
-
 Loading lunch data...
+</div>
 
+</div>
+
+</div>
+
+
+<!-- =====================================
+     MISSING
+===================================== -->
+
+<div
+    id="missingBox"
+    class="missing-box"
+    style="display:none;"
+>
+
+<div class="missing-title">
+⚠️ Missing Lunch Counts
+</div>
+
+<div class="missing-subtitle">
+Teachers who have not submitted today's lunch count.
+</div>
+
+<div id="missingTeachers">
 </div>
 
 </div>
@@ -1152,28 +1048,27 @@ Loading lunch data...
 
 
 </div>
-
 
 
 <div class="footer">
-
 Seminole Science Charter School • Daily Lunch Count
-
 </div>
 
 
 </div>
 
-
 </div>
 
 
 
-<!-- HIDDEN SUBMIT FRAME -->
+<!-- =========================================
+     HIDDEN SUBMIT FRAME
+========================================= -->
 
 <iframe
-name="submitFrame"
-style="display:none;">
+    name="submitFrame"
+    style="display:none;"
+>
 </iframe>
 
 
@@ -1181,9 +1076,9 @@ style="display:none;">
 <script>
 
 
-/* =================================================
+/* =========================================
    GOOGLE APPS SCRIPT URL
-================================================= */
+========================================= */
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbzmpz1R24ANxHIv8DNFdsuYRIUoVAzY_87e-kHu2d1kCGH3KodoXpqnHjYE2yZUEUGK/exec";
@@ -1191,26 +1086,29 @@ const API_URL =
 
 let currentBuilding = null;
 
+let currentBuildingTeachers = [];
 
-/* =================================================
+
+/* =========================================
    BUILDING NAMES
-================================================= */
+========================================= */
 
 const BUILDING_NAMES = {
 
-    "1": "Building 1 — Elementary",
+    "1":
+        "Building 1 — Elementary",
 
-    "2": "Building 2 — Middle-High"
+    "2":
+        "Building 2 — Middle-High"
 
 };
 
 
-/* =================================================
+/* =========================================
    DATE + TIME
-================================================= */
+========================================= */
 
 function updateDateTime() {
-
 
     const now =
         new Date();
@@ -1285,12 +1183,11 @@ setInterval(
 );
 
 
-/* =================================================
+/* =========================================
    OPEN BUILDING
-================================================= */
+========================================= */
 
 function openBuilding(building) {
-
 
     currentBuilding =
         String(building);
@@ -1329,27 +1226,30 @@ function openBuilding(building) {
         " Lunch Count";
 
 
+    document.getElementById(
+        "missingBox"
+    ).style.display =
+        "none";
+
+
     loadTeachers();
 
     loadLunchData();
 
 
-    window.scrollTo(
-        {
-            top: 0,
-            behavior: "smooth"
-        }
-    );
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
 
-/* =================================================
+/* =========================================
    GO HOME
-================================================= */
+========================================= */
 
 function goHome() {
-
 
     document.getElementById(
         "homePage"
@@ -1367,26 +1267,26 @@ function goHome() {
         null;
 
 
-    window.scrollTo(
-        {
-            top: 0,
-            behavior: "smooth"
-        }
-    );
+    currentBuildingTeachers =
+        [];
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
 
 
-/* =================================================
+/* =========================================
    JSONP
-================================================= */
+========================================= */
 
 function jsonp(action) {
 
-
     return new Promise(
         function(resolve, reject) {
-
 
             const callbackName =
                 "callback_" +
@@ -1406,14 +1306,11 @@ function jsonp(action) {
             window[callbackName] =
                 function(data) {
 
-
                     delete window[
                         callbackName
                     ];
 
-
                     script.remove();
-
 
                     resolve(data);
 
@@ -1423,14 +1320,11 @@ function jsonp(action) {
             script.onerror =
                 function() {
 
-
                     delete window[
                         callbackName
                     ];
 
-
                     script.remove();
-
 
                     reject(
                         new Error(
@@ -1461,12 +1355,11 @@ function jsonp(action) {
 }
 
 
-/* =================================================
+/* =========================================
    LOAD TEACHERS
-================================================= */
+========================================= */
 
 async function loadTeachers() {
-
 
     const select =
         document.getElementById(
@@ -1481,7 +1374,6 @@ async function loadTeachers() {
 
 
     try {
-
 
         const result =
             await jsonp(
@@ -1509,7 +1401,6 @@ async function loadTeachers() {
                 .filter(
                     function(teacher) {
 
-
                         return String(
                             teacher.building
                         ).trim()
@@ -1518,20 +1409,21 @@ async function loadTeachers() {
                             currentBuilding
                         ).trim();
 
-
                     }
                 )
                 .sort(
-                    function(a,b) {
-
+                    function(a, b) {
 
                         return a.name.localeCompare(
                             b.name
                         );
 
-
                     }
                 );
+
+
+        currentBuildingTeachers =
+            buildingTeachers.slice();
 
 
         select.innerHTML =
@@ -1542,7 +1434,6 @@ async function loadTeachers() {
 
         buildingTeachers.forEach(
             function(teacher) {
-
 
                 const option =
                     document.createElement(
@@ -1570,7 +1461,6 @@ async function loadTeachers() {
             buildingTeachers.length === 0
         ) {
 
-
             select.innerHTML =
                 '<option value="">' +
                 'No teachers found' +
@@ -1580,8 +1470,8 @@ async function loadTeachers() {
 
 
     }
-    catch(error) {
 
+    catch(error) {
 
         console.error(error);
 
@@ -1602,23 +1492,18 @@ async function loadTeachers() {
 }
 
 
-/* =================================================
+/* =========================================
    LOAD LUNCH DATA
-================================================= */
+========================================= */
 
 async function loadLunchData() {
 
-
-    document.getElementById(
-        "results"
-    ).innerHTML =
-        '<div class="empty">' +
-        'Loading lunch data...' +
-        '</div>';
+    if (!currentBuilding) {
+        return;
+    }
 
 
     try {
-
 
         const result =
             await jsonp(
@@ -1641,10 +1526,9 @@ async function loadLunchData() {
             []
         );
 
-
     }
-    catch(error) {
 
+    catch(error) {
 
         console.error(error);
 
@@ -1661,12 +1545,11 @@ async function loadLunchData() {
 }
 
 
-/* =================================================
+/* =========================================
    DISPLAY LUNCH DATA
-================================================= */
+========================================= */
 
 function displayLunchData(data) {
-
 
     const today =
         getToday();
@@ -1677,7 +1560,6 @@ function displayLunchData(data) {
 
     data.forEach(
         function(item) {
-
 
             const building =
                 String(
@@ -1704,7 +1586,6 @@ function displayLunchData(data) {
 
             ) {
 
-
                 teacherData[
                     item.teacher
                 ] =
@@ -1718,8 +1599,11 @@ function displayLunchData(data) {
     );
 
 
-    let total =
-        0;
+    /* =====================================
+       TOTAL
+    ===================================== */
+
+    let total = 0;
 
 
     Object.values(
@@ -1739,6 +1623,10 @@ function displayLunchData(data) {
         total;
 
 
+    /* =====================================
+       SUBMITTED TEACHERS
+    ===================================== */
+
     const teachers =
         Object.keys(
             teacherData
@@ -1749,7 +1637,6 @@ function displayLunchData(data) {
         teachers.length === 0
     ) {
 
-
         document.getElementById(
             "results"
         ).innerHTML =
@@ -1757,69 +1644,218 @@ function displayLunchData(data) {
             'No lunch counts submitted yet today.' +
             '</div>';
 
+    }
+
+    else {
+
+        let html =
+            '<div class="table-wrapper">' +
+
+            '<table>' +
+
+            '<thead>' +
+
+            '<tr>' +
+
+            '<th>Teacher</th>' +
+
+            '<th>Lunch</th>' +
+
+            '</tr>' +
+
+            '</thead>' +
+
+            '<tbody>';
+
+
+        teachers.forEach(
+            function(teacher) {
+
+                html +=
+
+                    '<tr>' +
+
+                    '<td>' +
+
+                    escapeHtml(
+                        teacher
+                    ) +
+
+                    '</td>' +
+
+                    '<td class="lunch-number">' +
+
+                    teacherData[
+                        teacher
+                    ] +
+
+                    '</td>' +
+
+                    '</tr>';
+
+            }
+        );
+
+
+        html +=
+            '</tbody>' +
+            '</table>' +
+            '</div>';
+
+
+        document.getElementById(
+            "results"
+        ).innerHTML =
+            html;
+
+    }
+
+
+    /* =====================================
+       UPDATE MISSING LIST
+    ===================================== */
+
+    showMissingTeachers(
+        teacherData
+    );
+
+}
+
+
+/* =========================================
+   MISSING TEACHERS
+========================================= */
+
+function showMissingTeachers(
+    submittedTeachers
+) {
+
+    const missingBox =
+        document.getElementById(
+            "missingBox"
+        );
+
+
+    const missingTeachers =
+        document.getElementById(
+            "missingTeachers"
+        );
+
+
+    if (
+        !missingBox ||
+        !missingTeachers
+    ) {
 
         return;
 
     }
 
 
-    let html =
-        '<div class="table-wrapper">' +
-        '<table>' +
-        '<thead>' +
-        '<tr>' +
-        '<th>Teacher</th>' +
-        '<th>Lunch</th>' +
-        '</tr>' +
-        '</thead>' +
-        '<tbody>';
+    const now =
+        new Date();
 
 
-    teachers.forEach(
+    /*
+     * Missing list appears at 8:00 AM.
+     */
+
+    const hour =
+        now.getHours();
+
+
+    if (hour < 8) {
+
+        missingBox.style.display =
+            "none";
+
+        return;
+
+    }
+
+
+    const submittedNames =
+        Object.keys(
+            submittedTeachers
+        );
+
+
+    const missing =
+        currentBuildingTeachers
+            .filter(
+                function(teacher) {
+
+                    return !submittedNames.includes(
+                        teacher.name
+                    );
+
+                }
+            )
+            .sort(
+                function(a, b) {
+
+                    return a.name.localeCompare(
+                        b.name
+                    );
+
+                }
+            );
+
+
+    missingBox.style.display =
+        "block";
+
+
+    if (
+        missing.length === 0
+    ) {
+
+        missingTeachers.innerHTML =
+
+            '<div class="all-submitted">' +
+
+            '✓ All teachers have submitted their lunch count.' +
+
+            '</div>';
+
+        return;
+
+    }
+
+
+    let html = "";
+
+
+    missing.forEach(
         function(teacher) {
 
-
             html +=
-                '<tr>' +
 
-                '<td>' +
+                '<div class="missing-teacher">' +
+
+                '⚠️ ' +
+
                 escapeHtml(
-                    teacher
+                    teacher.name
                 ) +
-                '</td>' +
 
-                '<td class="lunch-number">' +
-                teacherData[
-                    teacher
-                ] +
-                '</td>' +
-
-                '</tr>';
+                '</div>';
 
         }
     );
 
 
-    html +=
-        '</tbody>' +
-        '</table>' +
-        '</div>';
-
-
-    document.getElementById(
-        "results"
-    ).innerHTML =
+    missingTeachers.innerHTML =
         html;
 
 }
 
 
-/* =================================================
+/* =========================================
    SUBMIT LUNCH
-================================================= */
+========================================= */
 
 function submitLunch() {
-
 
     const teacher =
         document.getElementById(
@@ -1835,12 +1871,10 @@ function submitLunch() {
 
     if (!teacher) {
 
-
         showMessage(
             "Please select your name.",
             false
         );
-
 
         return;
 
@@ -1863,12 +1897,10 @@ function submitLunch() {
 
     ) {
 
-
         showMessage(
             "Please enter a whole number.",
             false
         );
-
 
         return;
 
@@ -1946,7 +1978,6 @@ function submitLunch() {
     setTimeout(
         function() {
 
-
             button.disabled =
                 false;
 
@@ -1967,8 +1998,13 @@ function submitLunch() {
             );
 
 
-            loadLunchData();
+            /*
+             * Immediately refresh.
+             * This removes the teacher from
+             * Missing Lunch Counts.
+             */
 
+            loadLunchData();
 
         },
         1200
@@ -1977,16 +2013,15 @@ function submitLunch() {
 }
 
 
-/* =================================================
+/* =========================================
    ADD FORM FIELD
-================================================= */
+========================================= */
 
 function addField(
     form,
     name,
     value
 ) {
-
 
     const input =
         document.createElement(
@@ -2013,15 +2048,14 @@ function addField(
 }
 
 
-/* =================================================
+/* =========================================
    MESSAGE
-================================================= */
+========================================= */
 
 function showMessage(
     text,
     success
 ) {
-
 
     const message =
         document.getElementById(
@@ -2046,10 +2080,8 @@ function showMessage(
     setTimeout(
         function() {
 
-
             message.style.display =
                 "none";
-
 
         },
         4000
@@ -2058,12 +2090,11 @@ function showMessage(
 }
 
 
-/* =================================================
+/* =========================================
    TODAY
-================================================= */
+========================================= */
 
 function getToday() {
-
 
     const now =
         new Date();
@@ -2081,7 +2112,7 @@ function getToday() {
 
         String(
             now.getMonth() + 1
-        ).padStart(2,"0")
+        ).padStart(2, "0")
 
         +
 
@@ -2091,19 +2122,18 @@ function getToday() {
 
         String(
             now.getDate()
-        ).padStart(2,"0")
+        ).padStart(2, "0")
 
     );
 
 }
 
 
-/* =================================================
+/* =========================================
    FORMAT DATE
-================================================= */
+========================================= */
 
 function formatDate(value) {
-
 
     if (!value) {
 
@@ -2139,7 +2169,7 @@ function formatDate(value) {
 
         String(
             date.getMonth() + 1
-        ).padStart(2,"0")
+        ).padStart(2, "0")
 
         +
 
@@ -2149,19 +2179,18 @@ function formatDate(value) {
 
         String(
             date.getDate()
-        ).padStart(2,"0")
+        ).padStart(2, "0")
 
     );
 
 }
 
 
-/* =================================================
+/* =========================================
    ESCAPE HTML
-================================================= */
+========================================= */
 
 function escapeHtml(text) {
-
 
     const div =
         document.createElement(
@@ -2176,6 +2205,26 @@ function escapeHtml(text) {
     return div.innerHTML;
 
 }
+
+
+/* =========================================
+   AUTO REFRESH
+   EVERY 15 SECONDS
+========================================= */
+
+setInterval(
+    function() {
+
+        if (currentBuilding) {
+
+            loadLunchData();
+
+        }
+
+    },
+    15000
+);
+
 
 </script>
 
