@@ -22,10 +22,9 @@ body {
     color: #17243d;
 }
 
-
-/* =========================================
+/* =========================
    HEADER
-========================================= */
+========================= */
 
 .header {
     background: #ffffff;
@@ -66,12 +65,12 @@ body {
     color: #667085;
 }
 
-
-/* =========================================
-   LUNCH MENU
-========================================= */
+/* =========================
+   LUNCH MENU BUTTON
+========================= */
 
 .menu-button {
+    border: none;
     text-decoration: none;
     background: #245a96;
     color: white;
@@ -79,6 +78,7 @@ body {
     border-radius: 11px;
     font-size: 15px;
     font-weight: 800;
+    cursor: pointer;
     transition: .2s;
 }
 
@@ -86,10 +86,9 @@ body {
     background: #194879;
 }
 
-
-/* =========================================
+/* =========================
    MAIN
-========================================= */
+========================= */
 
 .container {
     max-width: 1250px;
@@ -97,10 +96,9 @@ body {
     padding: 48px 25px 70px;
 }
 
-
-/* =========================================
+/* =========================
    HOME
-========================================= */
+========================= */
 
 .hero {
     text-align: center;
@@ -120,10 +118,9 @@ body {
     color: #667085;
 }
 
-
-/* =========================================
+/* =========================
    DATE TIME
-========================================= */
+========================= */
 
 .datetime {
     display: inline-flex;
@@ -138,10 +135,9 @@ body {
     font-weight: 600;
 }
 
-
-/* =========================================
+/* =========================
    DEADLINE
-========================================= */
+========================= */
 
 .deadline {
     max-width: 900px;
@@ -165,10 +161,9 @@ body {
     font-size: 14px;
 }
 
-
-/* =========================================
-   BUILDING CARDS
-========================================= */
+/* =========================
+   BUILDINGS
+========================= */
 
 .buildings {
     display: grid;
@@ -250,10 +245,9 @@ body {
     background: #fff0f1;
 }
 
-
-/* =========================================
+/* =========================
    OPEN BUTTON
-========================================= */
+========================= */
 
 .open-button {
     border: none;
@@ -281,10 +275,9 @@ body {
     background: #a91e28;
 }
 
-
-/* =========================================
+/* =========================
    BUILDING PAGE
-========================================= */
+========================= */
 
 .page {
     display: none;
@@ -311,10 +304,9 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================================
+/* =========================
    BACK BUTTON
-========================================= */
+========================= */
 
 .back-button {
     background: none;
@@ -327,10 +319,9 @@ body {
     margin-bottom: 22px;
 }
 
-
-/* =========================================
+/* =========================
    TITLE
-========================================= */
+========================= */
 
 .page-title h2 {
     margin: 0;
@@ -344,10 +335,9 @@ body {
     font-size: 16px;
 }
 
-
-/* =========================================
+/* =========================
    LAYOUT
-========================================= */
+========================= */
 
 .layout {
     margin-top: 28px;
@@ -357,10 +347,9 @@ body {
     align-items: start;
 }
 
-
-/* =========================================
+/* =========================
    CARDS
-========================================= */
+========================= */
 
 .form-card,
 .results-card {
@@ -376,10 +365,9 @@ body {
     margin-top: 0;
 }
 
-
-/* =========================================
+/* =========================
    FORM
-========================================= */
+========================= */
 
 label {
     display: block;
@@ -405,10 +393,9 @@ input:focus {
     box-shadow: 0 0 0 3px rgba(36,90,150,.12);
 }
 
-
-/* =========================================
+/* =========================
    SUBMIT
-========================================= */
+========================= */
 
 .submit-button {
     width: 100%;
@@ -432,10 +419,9 @@ input:focus {
     cursor: wait;
 }
 
-
-/* =========================================
+/* =========================
    RESULTS
-========================================= */
+========================= */
 
 .results-header {
     display: flex;
@@ -466,10 +452,9 @@ input:focus {
     font-weight: 800;
 }
 
-
-/* =========================================
+/* =========================
    TABLE
-========================================= */
+========================= */
 
 .table-wrapper {
     overflow-x: auto;
@@ -504,10 +489,9 @@ td:last-child {
     font-weight: 800;
 }
 
-
-/* =========================================
+/* =========================
    MISSING
-========================================= */
+========================= */
 
 .missing-box {
     margin-top: 28px;
@@ -549,10 +533,9 @@ td:last-child {
     font-weight: 700;
 }
 
-
-/* =========================================
+/* =========================
    EMPTY
-========================================= */
+========================= */
 
 .empty {
     text-align: center;
@@ -560,10 +543,9 @@ td:last-child {
     color: #667085;
 }
 
-
-/* =========================================
+/* =========================
    MESSAGE
-========================================= */
+========================= */
 
 .message {
     display: none;
@@ -585,10 +567,9 @@ td:last-child {
     color: #842029;
 }
 
-
-/* =========================================
+/* =========================
    FOOTER
-========================================= */
+========================= */
 
 .footer {
     text-align: center;
@@ -597,10 +578,9 @@ td:last-child {
     font-size: 13px;
 }
 
-
-/* =========================================
+/* =========================
    MOBILE
-========================================= */
+========================= */
 
 @media(max-width: 800px) {
 
@@ -689,9 +669,9 @@ td:last-child {
 <body>
 
 
-<!-- =========================================
+<!-- =========================
      HEADER
-========================================= -->
+========================= -->
 
 <header class="header">
 
@@ -721,32 +701,30 @@ Student Lunch Count
 
 
 <!--
-    target="_blank" means Lunch Menu
-    opens in a NEW TAB.
-    Lunch Count stays open.
+    IMPORTANT:
+    This is a BUTTON, not a normal link.
+    JavaScript opens Lunch Menu in a NEW TAB.
 -->
 
-<a
-    href="https://sla-oss.nutrislice.com/menus-eula"
-    target="_blank"
-    rel="noopener noreferrer"
+<button
+    type="button"
     class="menu-button"
+    onclick="openLunchMenu()"
 >
 🍽️ Lunch Menu
-</a>
+</button>
 
 </div>
 
 </header>
 
 
-
 <div class="container">
 
 
-<!-- =========================================
+<!-- =========================
      HOME PAGE
-========================================= -->
+========================= -->
 
 <div id="homePage">
 
@@ -863,22 +841,19 @@ Open Building 2
 Seminole Science Charter School • Daily Lunch Count
 </div>
 
-
 </div>
 
 
 
-<!-- =========================================
+<!-- =========================
      BUILDING PAGE
-========================================= -->
+========================= -->
 
 <div
     id="buildingPage"
     class="page"
 >
 
-
-<!-- DATE + TIME ONLY -->
 
 <div class="building-top">
 
@@ -918,9 +893,7 @@ Submit today's student lunch count.
 <div class="layout">
 
 
-<!-- =====================================
-     FORM
-===================================== -->
+<!-- FORM -->
 
 <div class="form-card">
 
@@ -974,9 +947,7 @@ SUBMIT LUNCH COUNT
 
 
 
-<!-- =====================================
-     RESULTS
-===================================== -->
+<!-- RESULTS -->
 
 <div>
 
@@ -1017,9 +988,7 @@ Loading lunch data...
 </div>
 
 
-<!-- =====================================
-     MISSING
-===================================== -->
+<!-- MISSING -->
 
 <div
     id="missingBox"
@@ -1043,7 +1012,6 @@ Teachers who have not submitted today's lunch count.
 
 </div>
 
-
 </div>
 
 
@@ -1057,10 +1025,7 @@ Seminole Science Charter School • Daily Lunch Count
 </div>
 
 
-
-<!-- =========================================
-     HIDDEN SUBMIT FRAME
-========================================= -->
+<!-- HIDDEN FRAME -->
 
 <iframe
     name="submitFrame"
@@ -1073,9 +1038,9 @@ Seminole Science Charter School • Daily Lunch Count
 <script>
 
 
-/* =========================================
-   GOOGLE APPS SCRIPT URL
-========================================= */
+/* =========================
+   GOOGLE APPS SCRIPT
+========================= */
 
 const API_URL =
 "https://script.google.com/macros/s/AKfycbzmpz1R24ANxHIv8DNFdsuYRIUoVAzY_87e-kHu2d1kCGH3KodoXpqnHjYE2yZUEUGK/exec";
@@ -1086,9 +1051,9 @@ let currentBuilding = null;
 let currentBuildingTeachers = [];
 
 
-/* =========================================
+/* =========================
    BUILDING NAMES
-========================================= */
+========================= */
 
 const BUILDING_NAMES = {
 
@@ -1101,9 +1066,47 @@ const BUILDING_NAMES = {
 };
 
 
-/* =========================================
+/* =========================
+   OPEN LUNCH MENU
+========================= */
+
+/*
+   IMPORTANT:
+   window.open with "_blank"
+   opens Nutrislice in a NEW TAB.
+*/
+
+function openLunchMenu() {
+
+    const lunchMenuWindow =
+        window.open(
+            "https://sla-oss.nutrislice.com/menus-eula",
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+
+    /*
+       Some browsers may block popups.
+       This gives a fallback.
+    */
+
+    if (
+        !lunchMenuWindow
+    ) {
+
+        alert(
+            "Please allow pop-ups for this website to open the Lunch Menu."
+        );
+
+    }
+
+}
+
+
+/* =========================
    DATE + TIME
-========================================= */
+========================= */
 
 function updateDateTime() {
 
@@ -1180,9 +1183,9 @@ setInterval(
 );
 
 
-/* =========================================
+/* =========================
    OPEN BUILDING
-========================================= */
+========================= */
 
 function openBuilding(building) {
 
@@ -1242,9 +1245,9 @@ function openBuilding(building) {
 }
 
 
-/* =========================================
+/* =========================
    GO HOME
-========================================= */
+========================= */
 
 function goHome() {
 
@@ -1276,9 +1279,9 @@ function goHome() {
 }
 
 
-/* =========================================
+/* =========================
    JSONP
-========================================= */
+========================= */
 
 function jsonp(action) {
 
@@ -1352,9 +1355,9 @@ function jsonp(action) {
 }
 
 
-/* =========================================
+/* =========================
    LOAD TEACHERS
-========================================= */
+========================= */
 
 async function loadTeachers() {
 
@@ -1448,6 +1451,13 @@ async function loadTeachers() {
         );
 
 
+        /*
+           Refresh Missing list after
+           teacher list has loaded.
+        */
+
+        loadLunchData();
+
     }
 
     catch(error) {
@@ -1464,9 +1474,9 @@ async function loadTeachers() {
 }
 
 
-/* =========================================
+/* =========================
    LOAD LUNCH DATA
-========================================= */
+========================= */
 
 async function loadLunchData() {
 
@@ -1509,9 +1519,9 @@ async function loadLunchData() {
 }
 
 
-/* =========================================
+/* =========================
    DISPLAY LUNCH DATA
-========================================= */
+========================= */
 
 function displayLunchData(data) {
 
@@ -1563,9 +1573,7 @@ function displayLunchData(data) {
     );
 
 
-    /* =====================================
-       TOTAL
-    ===================================== */
+    /* TOTAL */
 
     let total = 0;
 
@@ -1587,9 +1595,7 @@ function displayLunchData(data) {
         total;
 
 
-    /* =====================================
-       SUBMITTED TEACHERS
-    ===================================== */
+    /* SUBMITTED */
 
     const teachers =
         Object.keys(
@@ -1674,9 +1680,9 @@ function displayLunchData(data) {
 }
 
 
-/* =========================================
+/* =========================
    MISSING TEACHERS
-========================================= */
+========================= */
 
 function showMissingTeachers(
     submittedTeachers
@@ -1709,7 +1715,7 @@ function showMissingTeachers(
 
 
     /*
-       Missing list starts at 8:00 AM.
+       Missing list appears at 8:00 AM.
     */
 
     if (
@@ -1801,9 +1807,9 @@ function showMissingTeachers(
 }
 
 
-/* =========================================
+/* =========================
    SUBMIT LUNCH
-========================================= */
+========================= */
 
 function submitLunch() {
 
@@ -1949,8 +1955,8 @@ function submitLunch() {
 
 
             /*
-               Immediately refresh.
-               Teacher disappears from Missing.
+               Refresh immediately.
+               Teacher will disappear from Missing.
             */
 
             loadLunchData();
@@ -1962,9 +1968,9 @@ function submitLunch() {
 }
 
 
-/* =========================================
+/* =========================
    ADD FIELD
-========================================= */
+========================= */
 
 function addField(
     form,
@@ -1997,9 +2003,9 @@ function addField(
 }
 
 
-/* =========================================
+/* =========================
    MESSAGE
-========================================= */
+========================= */
 
 function showMessage(
     text,
@@ -2039,9 +2045,9 @@ function showMessage(
 }
 
 
-/* =========================================
+/* =========================
    TODAY
-========================================= */
+========================= */
 
 function getToday() {
 
@@ -2078,9 +2084,9 @@ function getToday() {
 }
 
 
-/* =========================================
+/* =========================
    FORMAT DATE
-========================================= */
+========================= */
 
 function formatDate(value) {
 
@@ -2133,9 +2139,9 @@ function formatDate(value) {
 }
 
 
-/* =========================================
+/* =========================
    ESCAPE HTML
-========================================= */
+========================= */
 
 function escapeHtml(text) {
 
@@ -2154,15 +2160,17 @@ function escapeHtml(text) {
 }
 
 
-/* =========================================
+/* =========================
    AUTO REFRESH
    EVERY 15 SECONDS
-========================================= */
+========================= */
 
 setInterval(
     function() {
 
         if (currentBuilding) {
+
+            loadTeachers();
 
             loadLunchData();
 
