@@ -11,10 +11,6 @@
 
 <style>
 
-/* =========================================
-   GENERAL
-========================================= */
-
 * {
     box-sizing: border-box;
 }
@@ -103,7 +99,7 @@ body {
 
 
 /* =========================================
-   HOME HERO
+   HOME
 ========================================= */
 
 .hero {
@@ -171,7 +167,7 @@ body {
 
 
 /* =========================================
-   BUILDINGS
+   BUILDING CARDS
 ========================================= */
 
 .buildings {
@@ -256,7 +252,7 @@ body {
 
 
 /* =========================================
-   BUTTONS
+   OPEN BUTTON
 ========================================= */
 
 .open-button {
@@ -287,18 +283,12 @@ body {
 
 
 /* =========================================
-   PAGE
+   BUILDING PAGE
 ========================================= */
 
 .page {
     display: none;
 }
-
-
-/* =========================================
-   BUILDING DATE
-   NO SECOND LOGO
-========================================= */
 
 .building-top {
     display: flex;
@@ -323,7 +313,7 @@ body {
 
 
 /* =========================================
-   BACK
+   BACK BUTTON
 ========================================= */
 
 .back-button {
@@ -339,7 +329,7 @@ body {
 
 
 /* =========================================
-   PAGE TITLE
+   TITLE
 ========================================= */
 
 .page-title h2 {
@@ -730,9 +720,16 @@ Student Lunch Count
 </div>
 
 
+<!--
+    target="_blank" means Lunch Menu
+    opens in a NEW TAB.
+    Lunch Count stays open.
+-->
+
 <a
     href="https://sla-oss.nutrislice.com/menus-eula"
     target="_blank"
+    rel="noopener noreferrer"
     class="menu-button"
 >
 🍽️ Lunch Menu
@@ -748,7 +745,7 @@ Student Lunch Count
 
 
 <!-- =========================================
-     HOME
+     HOME PAGE
 ========================================= -->
 
 <div id="homePage">
@@ -1367,12 +1364,6 @@ async function loadTeachers() {
         );
 
 
-    select.innerHTML =
-        "<option>" +
-        "Loading teachers..." +
-        "</option>";
-
-
     try {
 
         const result =
@@ -1457,35 +1448,16 @@ async function loadTeachers() {
         );
 
 
-        if (
-            buildingTeachers.length === 0
-        ) {
-
-            select.innerHTML =
-                '<option value="">' +
-                'No teachers found' +
-                '</option>';
-
-        }
-
-
     }
 
     catch(error) {
 
         console.error(error);
 
-
         select.innerHTML =
             '<option value="">' +
             'Unable to load teachers' +
             '</option>';
-
-
-        showMessage(
-            "Unable to load the teacher list.",
-            false
-        );
 
     }
 
@@ -1531,14 +1503,6 @@ async function loadLunchData() {
     catch(error) {
 
         console.error(error);
-
-
-        document.getElementById(
-            "results"
-        ).innerHTML =
-            '<div class="empty">' +
-            'Unable to load lunch data.' +
-            '</div>';
 
     }
 
@@ -1650,21 +1614,13 @@ function displayLunchData(data) {
 
         let html =
             '<div class="table-wrapper">' +
-
             '<table>' +
-
             '<thead>' +
-
             '<tr>' +
-
             '<th>Teacher</th>' +
-
             '<th>Lunch</th>' +
-
             '</tr>' +
-
             '</thead>' +
-
             '<tbody>';
 
 
@@ -1711,10 +1667,6 @@ function displayLunchData(data) {
     }
 
 
-    /* =====================================
-       UPDATE MISSING LIST
-    ===================================== */
-
     showMissingTeachers(
         teacherData
     );
@@ -1757,14 +1709,12 @@ function showMissingTeachers(
 
 
     /*
-     * Missing list appears at 8:00 AM.
-     */
+       Missing list starts at 8:00 AM.
+    */
 
-    const hour =
-        now.getHours();
-
-
-    if (hour < 8) {
+    if (
+        now.getHours() < 8
+    ) {
 
         missingBox.style.display =
             "none";
@@ -1999,10 +1949,9 @@ function submitLunch() {
 
 
             /*
-             * Immediately refresh.
-             * This removes the teacher from
-             * Missing Lunch Counts.
-             */
+               Immediately refresh.
+               Teacher disappears from Missing.
+            */
 
             loadLunchData();
 
@@ -2014,7 +1963,7 @@ function submitLunch() {
 
 
 /* =========================================
-   ADD FORM FIELD
+   ADD FIELD
 ========================================= */
 
 function addField(
@@ -2136,9 +2085,7 @@ function getToday() {
 function formatDate(value) {
 
     if (!value) {
-
         return "";
-
     }
 
 
@@ -2225,9 +2172,7 @@ setInterval(
     15000
 );
 
-
 </script>
-
 
 </body>
 
